@@ -1,7 +1,7 @@
  let ccounter = 0;
   let ccounterr = 0; //posts
- let fannns = 1000000 ; //fans
- let follo = 100000 ; //followers
+ let fannns = 0 ; //fans
+ let follo = 0 ; //followers
  let mm = 0 ;   //total views
  let mon = 0 ; //money-capital
  let v = 0  ; //views
