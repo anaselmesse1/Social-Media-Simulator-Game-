@@ -14,7 +14,7 @@ A fun simulation game that mimics the dynamics of a real social media platform l
 ## 💻 Built With
 
 - HTML
-- CSS
+- CSS (Bootstrap)
 - JavaScript (Vanilla)
 
 ## 🧠 Logic Highlights
@@ -31,13 +31,11 @@ A fun simulation game that mimics the dynamics of a real social media platform l
 ## 🛠️ How to Run
 
 1. Clone the repository
-2. Open `index.html` in your browser
+2. Open `twittersim.html` in your browser
 3. Play and enjoy!
 
 ## 🙌 Contributions
 
 Feel free to fork this project, suggest improvements, or add new features!
 
-## 📜 License
 
-MIT License
