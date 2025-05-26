@@ -300,10 +300,25 @@ mon.innerHTML = '$' + formatNumber(wow.toFixed(2))  + ' (Earn $5 for every 1000 
 viewss.innerHTML  = formatNumber(v) 
 likess.innerHTML  = formatNumber(l) 
 sharess.innerHTML  = formatNumber(s) 
-
-   //likes, shares & views 
-}
+if (document.getElementById('captt').value.length > 1) {
   
+let text = document.getElementById('captt').value;
+let result = '';
+
+for (let i = 0; i < text.length; i += 63) {
+  result += text.slice(i, i + 63) + '<br>';
+}
+
+stt.innerHTML = result;
+
+
+
+}
+
+
+   
+}
+  //likes, shares & views 
 function h(hash){
  
 
