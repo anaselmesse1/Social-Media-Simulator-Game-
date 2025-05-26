@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tweet Simulator</title>
+<link rel="stylesheet" href="twittersim.css">
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      transform: all 1s;
+    }
+      .twitter-box {
+    background-color: #15202b;
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+
+  .twitter-header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .info-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #2f3336;
+  }
+
+  .info-line:last-child {
+    border-bottom: none;
+  }
+
+  .highlight {
+    color: #1da1f2;
+    font-weight: bold;
+  }
+
+  .green-gain {
+    color: #00ff7f;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+    .tweet-card {
+      background-color: #000000;
+      border-radius: 1rem;
+      padding: 1.2rem;
+      margin: 20px auto;
+      max-width: 600px;
+        transition: all 1s;
+    }
+    .tweet-card:hover{
+        background-color: #000000;
+      border-radius: 1rem;
+      padding: 1.2rem;
+      margin: 20px auto;
+      max-width: 600px; 
+      transform: scale(1.02) ;
+           outline: 2px solid #103349d0; /* Nice visible border effect */
+  outline-offset: 2px;
+  transform: scale(1.01); 
+  box-shadow: 0 0 0 4px #103349d0;
+    }
+
+    .tweet-header h6 {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .tweet-header small {
+      color: #8899a6;
+    }
+
+    .tweet-text {
+      font-size: 1rem;
+      padding: 1rem 0;
+    }
+
+    .tweet-stats {
+      display: flex;
+      justify-content: space-between;
+      color: #8899a6;
+      font-size: 0.9rem;
+    }
+
+    .info-box {
+      margin-bottom: 1rem;
+    }
+
+    button#but {
+      margin-bottom: 1rem;
+    }
+    .r{
+        transition: all 1s;
+    }
+    .r:hover {
+        
+        
+  transform: scale(1.01);
+    }
+    
+    .bt{
+        transition: all 1s;
+    }
+    .bt:hover{
+       transform: scale(1.05) 
+    }
+
+    a.{
+        color: blue;
+    }
+    .a:hover{
+        cursor: pointer;
+        color: rgb(147, 72, 218);
+    }
+    
+  </style>
+
+  <script src="twittersim.js" defer></script>
+</head>
+
+<body>
+    <h6 id="err" style="color: red; justify-content: center; display: flex;
+padding: 10px 0px 0px 0px;  text-align: center;">⚠️ Made a mistake or facing a problem? Don’t worry — you’ll see the errors right here.</h6>
+
+<div class="twitter-box">
+
+  <div class="info-line twitter-header">
+    <span>📢 Posts</span>
+    
+    <span id="fcc" style="color: red;">❌Failed: 0</span>
+    <span id="scc" style="color: greenyellow;">✅Success: 0</span>
+    
+  </div>
+
+  <div class="info-line">
+    <span>Total Views:</span>
+    <span class="highlight" id="mm">0 Total Views</span>
+  </div>
+
+  <div class="info-line">
+    <span>Earnings:</span>
+    <span class="highlight" id="moneyy">$0 (Earn $5 for every 1000 views!)</span> 
+  </div>
+
+  <div class="info-line">
+    <span>Fans:</span>
+    <span>
+      <strong id="fanss">0</strong> 
+      <span class="green-gain">+<span id="lastt">0</span></span>
+    </span>
+  </div>
+
+  <div class="info-line">
+    <span>Followers:</span>
+    <span>
+      <strong id="followerss">0</strong> 
+      <span class="green-gain">+<span id="lasttt">0</span></span>
+    </span>
+  </div>
+
+</div>
+
+
+<p style=" text-align: center;" ><a style="color: rgb(218, 191, 191);">Boost your reach with hashtags : </a><a  class="a" onclick="h('#Depression')">#Depression </a><a class="a" id="linn" onclick="h('#life')">#life</a>  <a class="a" onclick="h('#travis_scott')">#travis_scott</a>
+    <a class="a" onclick="h('#Viral')">#Viral </a><a class="a" id="linn" onclick="h('#fyp')">#fyp</a>  <a class="a" onclick="h('#Marokko')">#Marokko</a> 
+    <a class="a" onclick="h('#Deutschland')">#Deutschland </a><a class="a" id="linn" onclick="h('#Playboi_carti')">#Playboi_carti</a>  <a class="a" onclick="h('#Rap')">#Rap</a></p>
+<!-- Tweet Style captions -->
+  <div class="card p-3 pt-4 mb-4 shadow-sm r  " style="max-width: 600px; margin: auto; background-color: rgb(0, 0, 0); border-radius: 15px;">
+  <div class="d-flex" ">
+    <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="profile" width="48" height="48" class="rounded-circle me-2">
+    <div class="flex-grow-1" >
+      <textarea style="background-color: rgb(0, 0, 0); color: white;" class="form-control border-0 rr" rows="3" id="captt"  placeholder="What's happening?" style="resize:none ;"></textarea>
+      <div class="d-flex justify-content-end mt-2">
+        <button class="btn btn-dark rounded-pill px-3 mt-3 bt" onclick="t()" id="but">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Tweet Style Card -->
+  <div class="tweet-card">
+    <div class="tweet-header d-flex align-items-center justify-content-between">
+      <div>
+        <h6>Anas Elmessoual</h6>
+        <small>@anaselmesse · 1min (soon)</small>
+      </div>
+    </div>
+
+    <div class="tweet-text" id="capt">
+      I built this little program in just 3 hours — it’s a fun simulation where you can post tweets, write any caption you want, and watch your posts gain followers, fans, and even go viral sometimes!
+You can track your total views, post count, and more right on the screen.
+It’s just for fun, so enjoy experimenting and seeing what takes off! 🚀
+    </div>
+
+    <div class="tweet-stats">
+      <div><i class="bi bi-heart-fill me-1 text-danger"></i> Likes: <span id="likess">0</span></div>
+      <div><i class="bi bi-share-fill me-1"></i> Shares: <span id="sharess">0</span></div>
+      <div><i class="bi bi-bar-chart-line me-1"></i> Views: <span id="viewss">0</span></div>
+    </div>
+  </div>
+
+  <!-- Sound effect -->
+  <audio src="/success-1-6297.mp3" id="audiof"></audio>
+    <audio src="error-10-206498.mp3" id="audior"></audio>
+    <span id=" " style="color: greenyellow;"></span>
+</body>
+</html>
+
